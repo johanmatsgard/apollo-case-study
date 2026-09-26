@@ -4,14 +4,14 @@ Elvy's internal marketing platform. I built it and still develop it. The code is
 
 ## Background
 
-Our marketing runs across Meta, TikTok, Google, LinkedIn, print, DOOH, partners and door-to-door. The numbers were spread over four ad platforms and HubSpot, and there was no single place to see what was working and act on it. So I built one.
+Our marketing runs across Meta, TikTok, Google, LinkedIn, print, DOOH, partners and door-to-door. For a long time the numbers were all over the place. They're now consolidated in Firestore, our single source of truth, and Apollo is where the marketing team works with them: ad data from each platform alongside the company's real numbers.
 
 ## What it does
 
 - Pulls Meta, TikTok, Google and LinkedIn into one view
 - Won't rank channels against each other on metrics they measure differently
 - Gives recommendations that the team marks as implemented, skipped or watching
-- Tracks progress against Elvy's signed-customer count, read from the source system
+- Reads Elvy's own numbers, like signed customers, from Firestore
 - Drafts longer texts like press releases and debate articles in Elvy's voice
 - Multi-brand login with required 2FA
 
@@ -28,6 +28,7 @@ flowchart LR
   Channels --> J[Background jobs<br/>Inngest]
   J --> DB[(Supabase<br/>Postgres)]
   DB --> APP[Next.js 16<br/>on Vercel]
+  FS[(Firestore<br/>source of truth)] --> APP
   APP <--> AI[Anthropic API]
   APP --> R[Recommendations]
   CREW[Marketing team] --> APP
@@ -57,7 +58,7 @@ Channels aren't ranked against each other on conversions. Meta, TikTok, Google a
 
 Every recommendation needs a verdict. Otherwise suggestions pile up and nobody remembers which ones we acted on.
 
-No manually entered numbers. Progress comes from the signed-customer count directly, so Apollo shows the same figure as the rest of the business.
+No manually entered numbers. Everything comes straight from Firestore, so Apollo shows the same figures as the rest of the business.
 
 There's WebGL in a few places. A tool people use a lot is allowed to look good, as long as it doesn't slow down anyone's laptop.
 

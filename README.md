@@ -2,6 +2,10 @@
 
 Elvy's internal marketing platform. I built it and still develop it. The code is private, so this is a write-up of what it does and how it's put together.
 
+<img width="1568" height="776" alt="Apollo running on demo data" src="https://github.com/user-attachments/assets/f8452f52-da74-4143-9742-dcc3b81e4df1" />
+
+<sub>Recorded on a demo brand with invented data. None of the figures are real.</sub>
+
 ## Background
 
 Our marketing runs across Meta, TikTok, Google, LinkedIn, print, DOOH, partners and door-to-door. For a long time the numbers were all over the place. They're now consolidated in Firestore, our single source of truth, and Apollo is where the marketing team works with them: ad data from each platform alongside the company's real numbers.

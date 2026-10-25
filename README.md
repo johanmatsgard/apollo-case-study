@@ -66,4 +66,4 @@ No manually entered numbers. Everything comes straight from Firestore, so Apollo
 
 There's WebGL in a few places. A tool people use a lot is allowed to look good, as long as it doesn't slow down anyone's laptop.
 
-Stack: Next.js 16, Supabase (EU), Inngest, Anthropic SDK, Vercel.
+Stack: Next.js 16, Supabase (EU), Firestore (company data), Inngest, Anthropic SDK, Vercel.

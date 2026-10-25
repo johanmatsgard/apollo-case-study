@@ -1,6 +1,6 @@
 # Apollo
 
-Elvy's internal marketing platform. I built it and still develop it. The code is private, so this is a write-up of what it does and how it's put together.
+Elvy's AI marketing crew, one of the tools I build for our team. The code is private, so this is a write-up of what it does and how it's put together.
 
 <img width="1568" height="776" alt="Apollo running on demo data" src="https://github.com/user-attachments/assets/f8452f52-da74-4143-9742-dcc3b81e4df1" />
 
